@@ -2,12 +2,12 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0.0
+version: 1.0.1
 apiversion: 2
-description: My module
-author: Your Name
-license: Specify your license
-copyright: Copyright (c) 2012 by Your Company
+description:  This module allows converting xml documents into easily manageable JS structures
+author: Olivier Morandi
+license: MIT
+copyright: Copyright (c) 2013 Olivier Morandi
 
 
 # these should not be edited

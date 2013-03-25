@@ -139,11 +139,12 @@ NSString *const kXMLReaderTextNodeKey = @"text";
     {
         
         NSError *error = nil;
-        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\n\\r|\\n|\\r|\\t|\\ )"
+        NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"(\\n\\r|\\n|\\r|\\t)"
                                                                                options:NSRegularExpressionCaseInsensitive
                                                                                  error:&error];
-        [regex replaceMatchesInString:textInProgress options:0 range:NSMakeRange(0, [textInProgress length]) withTemplate:@""];
-        [dictInProgress setObject:textInProgress forKey:kXMLReaderTextNodeKey];
+        [regex replaceMatchesInString:textInProgress options:0 range:NSMakeRange(0, [textInProgress length]) withTemplate:@" "];
+        NSString *trimmedString = [textInProgress stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+        [dictInProgress setObject:trimmedString forKey:kXMLReaderTextNodeKey];
 
         // Reset the text
         [textInProgress release];
