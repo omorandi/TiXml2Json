@@ -2,7 +2,7 @@
 # this is your module manifest and used by Titanium
 # during compilation, packaging, distribution, etc.
 #
-version: 1.0.1
+version: 1.1.0
 apiversion: 2
 description:  This module allows converting xml documents into easily manageable JS structures
 author: Olivier Morandi
@@ -15,4 +15,4 @@ name: xml2json
 moduleid: ti.xml2json
 guid: 15a9a727-d76d-43cb-ba92-b344a3d83115
 platform: iphone
-minsdk: 2.1.0.GA
+minsdk: 3.4.0.GA
